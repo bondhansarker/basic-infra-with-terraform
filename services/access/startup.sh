@@ -137,19 +137,6 @@ services:
       backend:
          condition: service_healthy
 
-  redis:
-    container_name: redis
-    image: redis
-    environment:
-      - ALLOW_EMPTY_PASSWORD=NO
-      - REDIS_PORT_NUMBER=${REDIS_PORT}
-    command: redis-server --requirepass ${REDISPASS}
-    ports:
-      - '6379:6379'
-    volumes:
-      - redis:/data
-    restart: always
-
   backend:
     container_name: backend
     image: ${BACKEND_IMAGE}
