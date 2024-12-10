@@ -1,0 +1,5 @@
+functions-framework==3.*
+pandas
+google-cloud-storage
+psycopg2-binary
+google-cloud-secret-manager
